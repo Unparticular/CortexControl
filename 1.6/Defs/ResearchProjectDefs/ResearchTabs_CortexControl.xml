@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ResearchTabDef>
+        <defName>CC_CortexControl</defName>
+        <label>Cortex Control</label>
+        <generalTitle>Research various methods of controlling minds.</generalTitle>
+        <generalDescription>Unlock various means of controlling the minds of those you desire. While generally considered inferior to normal recruiting, higher tiers of control allow you to bypass things like unwavering loyalty and completely ignore certainty with minimal downsides, making it sometimes worthwhile to do so.</generalDescription>
+    </ResearchTabDef>
+</Defs>

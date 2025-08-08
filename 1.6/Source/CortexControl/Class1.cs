@@ -3,7 +3,7 @@ using Verse;
 
 namespace CortexControl
 {
-  public class Class1 : Recipe_InstallImplant
+  public class Class1 
   {
   }
 }

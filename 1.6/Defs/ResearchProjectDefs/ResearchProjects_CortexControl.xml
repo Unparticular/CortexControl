@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- ================= Cortex Control - Research Abstract ================= -->
+    <ResearchProjectDef Name="CC_ResearchBase" Abstract="True">
+        <tab>CC_CortexControl</tab>
+    </ResearchProjectDef>
+
+    <!-- ================= Chip Reprogramming ================= -->
+    <ResearchProjectDef ParentName="CC_ResearchBase">
+        <defName>CC_ChipReprogramming</defName>
+        <label>Chip Reprogramming</label>
+        <description>Learn how to reprogram those who already have a chip implanted in them, changing their loyalties and beliefs to that of the colony. This can be done on those of any faction, but is considered to be a hostile action by those of other factions.</description>
+        <baseCost>800</baseCost>
+        <techLevel>Industrial</techLevel>
+        <hiddenPrerequisites>
+            <li>MicroelectronicsBasics</li>
+        </hiddenPrerequisites>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <researchViewX>0</researchViewX>
+        <researchViewY>2</researchViewY>
+    </ResearchProjectDef>
+
+    <!-- ================= Basic Control ================= -->
+    <ResearchProjectDef ParentName="CC_ResearchBase">
+        <defName>CC_BasicControl</defName>
+        <label>Basic Control</label>
+        <description>A relatively primitive method of mental domination, this surgery rewires some parts of the brain to control the individual, disabling and modifying certain portions relevant to memory and loyalty.</description>
+        <baseCost>700</baseCost>
+        <techLevel>Medieval</techLevel>
+        <researchViewX>0</researchViewX>
+        <researchViewY>3</researchViewY>
+    </ResearchProjectDef>
+
+    <!-- ================= Standard Control ================= -->
+    <ResearchProjectDef ParentName="CC_ResearchBase">
+        <defName>CC_StandardControl</defName>
+        <label>Standard Control</label>
+        <description>A slightly more advanced form of mental domination, the addition of a basic chip allows one to automatically convert and recruit the subject, as the desired information is coded into the chip in advance.</description>
+        <baseCost>1200</baseCost>
+        <techLevel>Industrial</techLevel>
+        <prerequisites>
+            <li>CC_BasicControl</li>
+        </prerequisites>
+        <hiddenPrerequisites>
+            <li>MicroelectronicsBasics</li>
+        </hiddenPrerequisites>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <researchViewX>1</researchViewX>
+        <researchViewY>3</researchViewY>
+    </ResearchProjectDef>
+
+    <!-- ================= Advanced Control ================= -->
+    <ResearchProjectDef ParentName="CC_ResearchBase">
+        <defName>CC_AdvancedControl</defName>
+        <label>Advanced Control</label>
+        <description>The most advanced forms of mental domination created by man, these chips have nearly no downsides and in some cases are even considered by their users to improve those they use them on.</description>
+        <baseCost>2200</baseCost>
+        <techLevel>Spacer</techLevel>
+        <prerequisites>
+            <li>CC_StandardControl</li>
+        </prerequisites>
+        <hiddenPrerequisites>
+            <li>Fabrication</li>
+        </hiddenPrerequisites>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
+        <researchViewX>2</researchViewX>
+        <researchViewY>3</researchViewY>
+    </ResearchProjectDef>
+</Defs>
