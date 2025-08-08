@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ModMetaData>
+    <name>Cortex Control</name>
+    <description>This mod adds new implants and surgeries that allow you to control the minds of pawns they are implanted in, letting you instantly recruit and convert them to your ideology regardless of unwavering loyalty or certainty.</description>
+    <author>Unparticular</author>
+    <supportedVersions>
+        <li>1.6</li>
+    </supportedVersions>
+    <packageId>unparticular.cortexcontrol</packageId>
+</ModMetaData>
