@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace CortexControl
 {
-    public class Recipe_InstallImplantWithBrainwash : Recipe_InstallImplant
+    public class Recipe_InstallImplantWithBrainwash : Recipe_InstallImplantCC
     {
         public override void ApplyOnPawn(
             Pawn patient,
@@ -45,6 +45,7 @@ namespace CortexControl
             {
                 Log.Message("Ideology set for patient: " + patient.Name + " to " + surgeon.Ideo);
                 patient.ideo.SetIdeo(surgeon.Ideo);
+                patient.ideo.OffsetCertainty(100);
             }
         }
     }
