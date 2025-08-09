@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+
+    <!-- ================= Cognitive Rewiring ================= -->
     <HediffDef>
         <defName>CC_CognitiveRewiring</defName>
         <label>cognitive rewiring</label>
@@ -54,7 +56,9 @@
             </li>
         </stages>
     </HediffDef>
-    
+
+
+    <!-- ================= Cognitive Rewiring Surgery ================= -->
     <RecipeDef ParentName="SurgeryFlesh">
         <defName>CC_CognitiveRewiringSurgery</defName>
         <label>perform cognitive rewiring</label>
@@ -77,7 +81,7 @@ This surgery has many serious downsides and cannot be undone. It can only be cur
         <addsHediff>CC_CognitiveRewiring</addsHediff>
         <removesHediff>CC_FracturedMind</removesHediff>
         <skillRequirements>
-            <Medicine>8</Medicine>
+            <Medicine>3</Medicine>
         </skillRequirements>
         <ingredients>
             <li>

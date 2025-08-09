@@ -20,9 +20,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4539-beta" />
+      <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4545-beta" />
     </ItemGroup>
-
+    
     <PropertyGroup>
         <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     </PropertyGroup>

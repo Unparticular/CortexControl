@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace CortexControl
 {
-    public class Recipe_InstallImplantWithAlmostRecruit : Recipe_InstallImplant
+    public class Recipe_InstallImplantWithAlmostRecruit : Recipe_InstallImplantCC
     {
         public override void ApplyOnPawn(
             Pawn patient,
@@ -14,29 +14,11 @@ namespace CortexControl
             List<Thing> ingredients,
             Bill bill)
         {
-            if (surgeon != null)
-            {
-                if (CheckSurgeryFail(surgeon, patient, ingredients, part, bill))
-                    return;
-                TaleRecorder.RecordTale(TaleDefOf.DidSurgery, (object) surgeon, (object) patient);
-            }
-            AlmostRecruitPawn(patient, bill);
-            patient.health.AddHediff(recipe.addsHediff, part);
-            var hediffToRemove = patient.health.hediffSet.GetFirstHediffOfDef(recipe.removesHediff);
-            if (hediffToRemove != null)
-            {
-                patient.health.RemoveHediff(hediffToRemove);
-            }
-            if (!patient.Dead)
-            {
-                if (IsViolationOnPawn(patient, part, Faction.OfPlayer))
-                    ReportViolation(patient, surgeon, patient.HomeFaction, -180);
-                return;
-            }
-            ThoughtUtility.GiveThoughtsForPawnExecuted(patient, surgeon, PawnExecutionKind.GenericBrutal);
+            base.ApplyOnPawn(patient, part, surgeon, ingredients, bill);
+            if (!patient.Dead) AlmostRecruitPawn(patient);
         }
-
-        private void AlmostRecruitPawn(Pawn patient, Bill bill)
+        
+        private void AlmostRecruitPawn(Pawn patient)
         {
             if (!patient.guest.Recruitable)
             {
