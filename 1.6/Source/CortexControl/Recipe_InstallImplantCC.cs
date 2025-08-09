@@ -28,7 +28,10 @@ namespace CortexControl
             if (!patient.Dead)
             {
                 if (IsViolationOnPawn(patient, part, Faction.OfPlayer))
-                    ReportViolation(patient, surgeon, patient.HomeFaction, -180);
+                {
+                    Log.Message("Reporting violation for patient: " + patient.Name);
+                    ReportViolation(patient, surgeon, patient.Faction, -180);
+                }
                 return;
             }
             ThoughtUtility.GiveThoughtsForPawnExecuted(patient, surgeon, PawnExecutionKind.GenericBrutal);
@@ -44,6 +47,7 @@ namespace CortexControl
                      hediffToRemove = patient.health.hediffSet.GetFirstHediffOfDef(hediff);
                     if (hediffToRemove != null)
                     {
+                        Log.Message("Removed hediff: " + hediffToRemove.Label + "from " + patient.Name);
                         patient.health.RemoveHediff(hediffToRemove);
                     }
                 }
