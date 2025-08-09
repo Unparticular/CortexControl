@@ -37,6 +37,7 @@ namespace CortexControl
             {
                 patient.guest.Notify_PawnRecruited();
             }
+            InteractionWorker_RecruitAttempt.DoRecruit(surgeon, patient);
         }
 
         private void ConvertPawn(Pawn patient, Pawn surgeon)
