@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace CortexControl
 {
-    public class Recipe_InstallImplantWithBrainwash : Recipe_InstallImplant
+    public class Recipe_InstallImplantWithBrainwash : Recipe_InstallImplantCC
     {
         public override void ApplyOnPawn(
             Pawn patient,
@@ -17,21 +17,36 @@ namespace CortexControl
             base.ApplyOnPawn(patient, part, surgeon, ingredients, bill);
             if (!patient.Dead)
             {
-                RecruitPawn(patient);
-                ConvertPawn(patient, surgeon);
+                ConvertPawn(patient, surgeon); 
+                RecruitPawn(patient, surgeon);
             }
         }
         
-        private void RecruitPawn(Pawn patient)
+        private void RecruitPawn(Pawn patient, Pawn surgeon)
         {
-            patient.SetFaction(Faction.OfPlayer);
+            Log.Message("Faction set for patient: " + patient.Name + " to " + surgeon.Faction);
+            if (patient.guest != null)
+            {
+                patient.guest.SetGuestStatus(null);
+            }
+            if (patient.Faction != surgeon.Faction)
+            {
+                patient.SetFaction(surgeon.Faction, surgeon);
+            }
+            if (patient.guest != null)
+            {
+                patient.guest.Notify_PawnRecruited();
+            }
+            InteractionWorker_RecruitAttempt.DoRecruit(surgeon, patient);
         }
 
         private void ConvertPawn(Pawn patient, Pawn surgeon)
         {
             if (ModLister.IdeologyInstalled)
             {
+                Log.Message("Ideology set for patient: " + patient.Name + " to " + surgeon.Ideo);
                 patient.ideo.SetIdeo(surgeon.Ideo);
+                patient.ideo.OffsetCertainty(100);
             }
         }
     }

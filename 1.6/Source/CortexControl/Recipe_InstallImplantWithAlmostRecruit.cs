@@ -20,6 +20,7 @@ namespace CortexControl
         
         private void AlmostRecruitPawn(Pawn patient)
         {
+            Log.Message("Resistance and will of " + patient.Name + " reduced by surgery");
             if (!patient.guest.Recruitable)
             {
                 var loyaltyMessage = $"{patient.Name}'s Unwavering Loyalty has been removed due to {recipe.addsHediff.label}.";

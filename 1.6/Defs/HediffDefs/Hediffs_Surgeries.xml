@@ -62,7 +62,7 @@
     <RecipeDef ParentName="SurgeryFlesh">
         <defName>CC_CognitiveRewiringSurgery</defName>
         <label>perform cognitive rewiring</label>
-        <description>A relatively primitive method of mental domination, this surgery rewires some parts of the brain to make the individual easier to manipulate by disabling and modifying certain portions relevant to memory and loyalty. Despite the high chance of death and serious downsides, surgeries like this are commonly used on corporate run urbworlds by the ruling class to acquire laborers for simple tasks due to the abundant quantity of people, extremely low costs, and because they can simply beat those who dare to step out of line them into submission.
+        <description>A relatively primitive method of mental domination, this surgery rewires some parts of the brain to make the individual easier to manipulate by disabling and modifying certain portions relevant to memory and loyalty. Despite the high chance of death and serious downsides, surgeries like this are commonly used on corporate run urbworlds by the ruling class to acquire laborers for simple tasks due to the abundant quantity of people and extremely low costs.
 
 This surgery has many serious downsides and cannot be undone. It can only be cured by using a healer mech serum or "fixed" by adding a control chip.</description>
         <descriptionHyperlinks>
@@ -77,7 +77,7 @@ This surgery has many serious downsides and cannot be undone. It can only be cur
         </appliedOnFixedBodyParts>
         <workAmount>5000</workAmount>
         <deathOnFailedSurgeryChance>0.9</deathOnFailedSurgeryChance>
-        <surgerySuccessChanceFactor>0.4</surgerySuccessChanceFactor>
+        <surgerySuccessChanceFactor>0.3</surgerySuccessChanceFactor>
         <addsHediff>CC_CognitiveRewiring</addsHediff>
         <removesHediff>CC_FracturedMind</removesHediff>
         <skillRequirements>

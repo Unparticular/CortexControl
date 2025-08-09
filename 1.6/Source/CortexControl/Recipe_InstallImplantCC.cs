@@ -15,26 +15,31 @@ namespace CortexControl
         {
             if (surgeon != null)
             {
-                if (CheckSurgeryFail(surgeon, patient, ingredients, part, bill))
-                    return;
+                var surgeryFailed = CheckSurgeryFail(surgeon, patient, ingredients, part, bill);
+                IsCCInstallViolation(patient, surgeon, surgeryFailed);
+                if (surgeryFailed) return;
                 TaleRecorder.RecordTale(TaleDefOf.DidSurgery, (object) surgeon, (object) patient);
             }
             TryRemoveHediff(patient);
             patient.health.AddHediff(recipe.addsHediff, part);
-            IsCCInstallViolation(patient, part, surgeon);
         }
-        protected void IsCCInstallViolation(Pawn patient, BodyPartRecord part, Pawn surgeon)
+
+        private void IsCCInstallViolation(Pawn patient, Pawn surgeon, bool surgeryFailed)
         {
-            if (!patient.Dead)
+            if (!recipe.isViolation) return;
+            
+            Log.Message("Reporting violation for patient: " + patient.Name);
+            
+            if (!surgeryFailed)
             {
-                if (IsViolationOnPawn(patient, part, Faction.OfPlayer))
-                    ReportViolation(patient, surgeon, patient.HomeFaction, -180);
+                ReportViolation(patient, surgeon, patient.HomeFaction, -200);
                 return;
             }
+            ReportViolation(patient, surgeon, patient.HomeFaction, -125);
             ThoughtUtility.GiveThoughtsForPawnExecuted(patient, surgeon, PawnExecutionKind.GenericBrutal);
         }
 
-        protected void TryRemoveHediff(Pawn patient)
+        private void TryRemoveHediff(Pawn patient)
         {
             Hediff hediffToRemove;
             if (recipe.HasModExtension<CCRecipeDefModExtension>())
@@ -42,10 +47,9 @@ namespace CortexControl
                 foreach (HediffDef hediff in recipe.GetModExtension<CCRecipeDefModExtension>().hediffsToRemove)
                 {
                      hediffToRemove = patient.health.hediffSet.GetFirstHediffOfDef(hediff);
-                    if (hediffToRemove != null)
-                    {
-                        patient.health.RemoveHediff(hediffToRemove);
-                    }
+                     if (hediffToRemove == null) continue;
+                     Log.Message("Removed hediff: " + hediffToRemove.Label + "from " + patient.Name);
+                     patient.health.RemoveHediff(hediffToRemove);
                 }
                 return;
             }
