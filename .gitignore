@@ -1,4 +1,4 @@
 .idea
 *.pdb
-*DotSettings.user
+*DotSettings.user*
 obj

@@ -1,1 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <HediffDef>
+        <defName>CC_CognitiveRewiring</defName>
+        <label>cognitive rewiring</label>
+        <description>A relatively primitive method of mental domination, this person has been rewired to make them easier to manipulate.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>CC_CognitiveRewiringSurgery</RecipeDef>
+        </descriptionHyperlinks>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.7,0.7,0.2)</defaultLabelColor>
+        <aptitudes MayRequire="Ludeon.RimWorld.Anomaly">
+            <Shooting>-2</Shooting>
+            <Melee>-2</Melee>
+            <Construction>-4</Construction>
+            <Mining>-4</Mining>
+            <Cooking>-4</Cooking>
+            <Plants>-4</Plants>
+            <Animals>-2</Animals>
+            <Crafting>-4</Crafting>
+            <Artistic>-4</Artistic>
+            <Medicine>-4</Medicine>
+            <Social>-4</Social>
+        </aptitudes>
+        <stages>
+            <li>
+                <disabledWorkTags>
+                    <li>Intellectual</li>
+                </disabledWorkTags>
+                <blocksInspirations>true</blocksInspirations>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <postFactor>0.8</postFactor>
+                    </li>
+                </capMods>
+                <statFactors>
+                    <GlobalLearningFactor>0.3</GlobalLearningFactor>
+                    <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">5</CertaintyLossFactor>
+                </statFactors>
+                <socialFightChanceFactor>4</socialFightChanceFactor>
+                <statOffsets>
+                    <MentalBreakThreshold>0.15</MentalBreakThreshold>
+                    <SocialImpact>-0.50</SocialImpact>
+                    <NegotiationAbility>-0.25</NegotiationAbility>
+                </statOffsets>
+                <mentalStateGivers>
+                    <li>
+                        <mentalState>WanderConfused</mentalState>
+                        <mtbDays>15</mtbDays>
+                    </li>
+                </mentalStateGivers>
+                <forgetMemoryThoughtMtbDays>5</forgetMemoryThoughtMtbDays>
+            </li>
+        </stages>
+    </HediffDef>
+    
+    <RecipeDef ParentName="SurgeryFlesh">
+        <defName>CC_CognitiveRewiringSurgery</defName>
+        <label>perform cognitive rewiring</label>
+        <description>A relatively primitive method of mental domination, this surgery rewires some parts of the brain to make the individual easier to manipulate by disabling and modifying certain portions relevant to memory and loyalty. Despite the high chance of death and serious downsides, surgeries like this are commonly used on corporate run urbworlds by the ruling class to acquire laborers for simple tasks due to the abundant quantity of people, extremely low costs, and because they can simply beat those who dare to step out of line them into submission.
+
+This surgery has many serious downsides and cannot be undone. It can only be cured by using a healer mech serum or "fixed" by adding a control chip.</description>
+        <descriptionHyperlinks>
+            <HediffDef>CC_CognitiveRewiring</HediffDef>
+        </descriptionHyperlinks>
+        <workerClass>CortexControl.Recipe_InstallImplantWithAlmostRecruit</workerClass>
+        <jobString>Performing cognitive rewiring.</jobString>
+        <isViolation>true</isViolation>
+        <anesthetize>true</anesthetize>
+        <appliedOnFixedBodyParts>
+            <li>Brain</li>
+        </appliedOnFixedBodyParts>
+        <workAmount>5000</workAmount>
+        <deathOnFailedSurgeryChance>0.9</deathOnFailedSurgeryChance>
+        <surgerySuccessChanceFactor>0.4</surgerySuccessChanceFactor>
+        <addsHediff>CC_CognitiveRewiring</addsHediff>
+        <removesHediff>CC_FracturedMind</removesHediff>
+        <skillRequirements>
+            <Medicine>8</Medicine>
+        </skillRequirements>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>Medicine</li>
+                    </categories>
+                </filter>
+                <count>3</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <categories>
+                <li>Medicine</li>
+            </categories>
+        </fixedIngredientFilter>
+        <recipeUsers>
+            <li>Human</li>
+            <li MayRequire="Ludeon.RimWorld.Anomaly">CreepJoiner</li>
+        </recipeUsers>
+        <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+        <researchPrerequisite>CC_BasicControl</researchPrerequisite>
+    </RecipeDef>
+    
+</Defs>

@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    <HediffDef ParentName="ChronicDiseaseBase">
+    <HediffDef>
         <defName>CC_FracturedMind</defName>
         <label>fractured mind</label>
         <description>The removal of a control chip has left this person's brain lacking crucial functions relating to memory and loyalty, making it incredibly difficult for them to recall or learn anything and leaving them in a permanent state of disarray. This can be cured by using a healer mech serum, or "fixed" by adding a control chip or doing brain modification surgery.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.8,0.2,0.2)</defaultLabelColor>
         <aptitudes MayRequire="Ludeon.RimWorld.Anomaly">
-            <Shooting>-15</Shooting>
-            <Melee>-15</Melee>
-            <Construction>-15</Construction>
-            <Mining>-15</Mining>
-            <Cooking>-15</Cooking>
-            <Plants>-15</Plants>
-            <Animals>-15</Animals>
-            <Crafting>-15</Crafting>
-            <Artistic>-15</Artistic>
-            <Medicine>-15</Medicine>
-            <Social>-15</Social>
+            <Shooting>-8</Shooting>
+            <Melee>-8</Melee>
+            <Construction>-16</Construction>
+            <Mining>-16</Mining>
+            <Cooking>-16</Cooking>
+            <Plants>-16</Plants>
+            <Animals>-8</Animals>
+            <Crafting>-16</Crafting>
+            <Artistic>-16</Artistic>
+            <Medicine>-16</Medicine>
+            <Social>-16</Social>
         </aptitudes>
         <stages>
             <li>
@@ -29,12 +31,15 @@
                         <postFactor>0.5</postFactor>
                     </li>
                 </capMods>
+                <socialFightChanceFactor>10</socialFightChanceFactor>
                 <statFactors>
-                    <GlobalLearningFactor>0</GlobalLearningFactor>
+                    <GlobalLearningFactor>0.1</GlobalLearningFactor>
                     <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">10</CertaintyLossFactor>
                 </statFactors>
                 <statOffsets>
                     <MentalBreakThreshold>0.70</MentalBreakThreshold>
+                    <SocialImpact>-1</SocialImpact>
+                    <NegotiationAbility>-0.90</NegotiationAbility>
                 </statOffsets>
                 <mentalStateGivers>
                     <li>
@@ -56,8 +61,8 @@
         <stages>
             <li>
                 <label>fractured mind</label>
-                <description>MY MIND IS IN UTTER CHAOS.</description>
-                <baseMoodEffect>-30</baseMoodEffect>
+                <description>My mind is in chaos.</description>
+                <baseMoodEffect>-20</baseMoodEffect>
             </li>
         </stages>
     </ThoughtDef>
