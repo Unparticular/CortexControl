@@ -2,6 +2,6 @@
 
 <Manifest>
     <identifier>CortexControl</identifier>
-    <version>1.0.0</version>
+    <version>0.1.0</version>
     <downloadUri>https://github.com/Unparticular/CortexControl/releases</downloadUri>
 </Manifest>
