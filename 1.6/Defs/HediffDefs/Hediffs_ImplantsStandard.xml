@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- ================= Standard Control Chip ================= -->
+    
+    <!-- ================= Standard Control Chip HediffDef ================= -->
+    
+    <HediffDef ParentName="CC_ImplantHediffBase">
+        <defName>CC_StandardControlChip</defName>
+        <label>standard control chip</label>
+        <labelNoun>a standard control chip</labelNoun>
+        <description>The standard form of mental domination.</description>
+        <descriptionHyperlinks>
+            <ThingDef>CC_StandardControlChip</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>CC_StandardControlChip</spawnThingOnRemoved>
+        <aptitudes MayRequire="Ludeon.RimWorld.Anomaly">
+            <Shooting>-1</Shooting>
+            <Melee>-1</Melee>
+            <Construction>-1</Construction>
+            <Mining>-1</Mining>
+            <Cooking>-1</Cooking>
+            <Plants>-1</Plants>
+            <Animals>-1</Animals>
+            <Crafting>-1</Crafting>
+            <Artistic>-1</Artistic>
+            <Medicine>-1</Medicine>
+            <Social>-1</Social>
+            <Intellectual>-1</Intellectual>
+        </aptitudes>
+        <stages>
+            <li>
+                <blocksInspirations>true</blocksInspirations>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <postFactor>0.9</postFactor>
+                    </li>
+                </capMods>
+                <statFactors>
+                    <GlobalLearningFactor>0.65</GlobalLearningFactor>
+                    <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0</CertaintyLossFactor>
+                </statFactors>
+                <socialFightChanceFactor>2</socialFightChanceFactor>
+                <statOffsets>
+                    <MentalBreakThreshold>0.07</MentalBreakThreshold>
+                    <SocialImpact>-0.10</SocialImpact>
+                    <NegotiationAbility>-0.05</NegotiationAbility>
+                    <TradePriceImprovement>-0.05</TradePriceImprovement>
+                    <ArrestSuccessChance>-0.05</ArrestSuccessChance>
+                    <SuppressionPower MayRequire="Ludeon.RimWorld.Ideology">-0.05</SuppressionPower>
+                    <ConversionPower MayRequire="Ludeon.RimWorld.Ideology">-0.05</ConversionPower>
+                </statOffsets>
+                <mentalStateGivers>
+                    <li>
+                        <mentalState>WanderConfused</mentalState>
+                        <mtbDays>30</mtbDays>
+                    </li>
+                </mentalStateGivers>
+                <forgetMemoryThoughtMtbDays>15</forgetMemoryThoughtMtbDays>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_ReactOnDamage">
+                <damageDefIncoming>EMP</damageDefIncoming>
+                <createHediff>BrainShock</createHediff>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <!-- ================= Standard Control Chip ThingDef ================= -->
+    
+    <ThingDef ParentName="BodyPartProstheticMakeableBase">
+        <defName>CC_StandardControlChip</defName>
+        <label>standard control chip</label>
+        <description>A slightly more advanced form of mental domination, the addition of a standard chip allows one to automatically convert and recruit the subject, as the desired information is coded into the chip in advance. Chips like these are commonly used by dictators to absorb the armies and vassals of those they conquer as the chips are cheap to manufacture and have more acceptable downsides. Like many other brain implants, this implant is vulnerable to EMP damage.
+
+Removing the chip is dangerous as it replaces a part of the brain of whomever it is implanted. Its removal will lead to their mental state degrading to that of an animal, and cause mental issues curable only via healer mech serum, or "fixable" by adding a control chip or doing brain modification surgery.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>CC_InstallStandardControlChip</RecipeDef>
+        </descriptionHyperlinks>
+        <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+        <costList>
+            <Steel>15</Steel>
+            <ComponentIndustrial>4</ComponentIndustrial>
+        </costList>
+        <recipeMaker>
+            <researchPrerequisite>CC_StandardControl</researchPrerequisite>
+        </recipeMaker>
+    </ThingDef>
+
+    <!-- ================= Install Standard Control Chip ================= -->
+
+    <RecipeDef ParentName="CC_InstallImplantBase">
+        <defName>CC_InstallStandardControlChip</defName>
+        <label>install standard control chip</label>
+        <description>Install standard control chip.</description>
+        <descriptionHyperlinks>
+            <ThingDef>CC_StandardControlChip</ThingDef>
+            <HediffDef>CC_StandardControlChip</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Installing standard control chip.</jobString>
+        <surgerySuccessChanceFactor>0.9</surgerySuccessChanceFactor>
+        <addsHediff>CC_StandardControlChip</addsHediff>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>CC_StandardControlChip</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>CC_StandardControlChip</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+    </RecipeDef>
+
+    <!-- ================= Remove Standard Control Chip ================= -->
+
+    <RecipeDef ParentName="CC_RemoveImplantBase">
+        <defName>CC_RemoveStandardControlChip</defName>
+        <label>remove standard control chip</label>
+        <description>Remove standard control chip.</description>
+        <descriptionHyperlinks>
+            <ThingDef>CC_StandardControlChip</ThingDef>
+            <HediffDef>CC_StandardControlChip</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Removing standard control chip.</jobString>
+        <removesHediff>CC_StandardControlChip</removesHediff>
+    </RecipeDef>
+
+</Defs>

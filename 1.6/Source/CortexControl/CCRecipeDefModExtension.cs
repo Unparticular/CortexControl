@@ -8,6 +8,6 @@ namespace CortexControl
     {
         public List<HediffDef> hediffsToRemove; 
         
-        public List<HediffDef> hediffsToAdd;
+        public List<HediffDef> requiredHediffs;
     }
 }

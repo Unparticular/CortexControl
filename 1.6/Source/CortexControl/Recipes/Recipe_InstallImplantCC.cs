@@ -16,7 +16,7 @@ namespace CortexControl
             if (surgeon != null)
             {
                 var surgeryFailed = CheckSurgeryFail(surgeon, patient, ingredients, part, bill);
-                IsCCInstallViolation(patient, surgeon, surgeryFailed);
+                IsCCInstallViolation(patient, part, surgeon, surgeryFailed);
                 if (surgeryFailed) return;
                 TaleRecorder.RecordTale(TaleDefOf.DidSurgery, (object) surgeon, (object) patient);
             }
@@ -24,11 +24,11 @@ namespace CortexControl
             patient.health.AddHediff(recipe.addsHediff, part);
         }
 
-        private void IsCCInstallViolation(Pawn patient, Pawn surgeon, bool surgeryFailed)
+        private void IsCCInstallViolation(Pawn patient, BodyPartRecord part, Pawn surgeon, bool surgeryFailed)
         {
-            if (!recipe.isViolation) return;
+            if (!IsViolationOnPawn(patient, part, Faction.OfPlayer)) return;
             
-            Log.Message("Reporting violation for patient: " + patient.Name);
+            Log.Message("Reporting installation violation for patient: " + patient.Name);
             
             if (!surgeryFailed)
             {
@@ -36,7 +36,6 @@ namespace CortexControl
                 return;
             }
             ReportViolation(patient, surgeon, patient.HomeFaction, -125);
-            ThoughtUtility.GiveThoughtsForPawnExecuted(patient, surgeon, PawnExecutionKind.GenericBrutal);
         }
 
         private void TryRemoveHediff(Pawn patient)
