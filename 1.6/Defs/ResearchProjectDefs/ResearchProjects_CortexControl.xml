@@ -9,7 +9,7 @@
     <ResearchProjectDef ParentName="CC_ResearchBase">
         <defName>CC_ChipReprogramming</defName>
         <label>Chip Reprogramming</label>
-        <description>Learn how to reprogram those who already have a chip implanted in them, changing their loyalties and beliefs to that of the colony. This can be done on those of any faction, but is considered to be a hostile action by those of other factions.</description>
+        <description>Learn how to reprogram those who already have a chip implanted in them, changing their loyalties and beliefs to that of the colony. This can be done on those of any faction, but is considered to be a hostile action.</description>
         <baseCost>800</baseCost>
         <techLevel>Industrial</techLevel>
         <hiddenPrerequisites>

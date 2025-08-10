@@ -52,7 +52,57 @@
             </categories>
         </fixedIngredientFilter>
     </RecipeDef>
-    
+
+    <!-- ================= Chip Reprogramming RecipeDef ================= -->
+
+    <RecipeDef ParentName="SurgeryFlesh">
+        <defName>CC_ChipReprogramming</defName>
+        <label>reprogram control chip</label>
+        <description>Many times when conquering other nations or capturing enemies, people have found those who already had chips implanted in them. Instead of going through the effort of removing the old chip and implanting their own, they developed ways to safely reprogram the chip to change their allegiance.
+        
+Reprogramming control chips is considered to be a hostile action.</description>
+        <descriptionHyperlinks>
+            <ThingDef>CC_StandardControlChip</ThingDef>
+        </descriptionHyperlinks>
+        <jobString>Reprogramming control chip.</jobString>
+        <appliedOnFixedBodyParts>
+            <li>Brain</li>
+        </appliedOnFixedBodyParts>
+        <workerClass>CortexControl.Recipe_ReprogramControlChip</workerClass>
+        <isViolation>true</isViolation>
+        <anesthetize>true</anesthetize>
+        <workAmount>1000</workAmount>
+        <deathOnFailedSurgeryChance>0</deathOnFailedSurgeryChance>
+        <surgerySuccessChanceFactor>5</surgerySuccessChanceFactor>
+        <skillRequirements>
+            <Crafting>8</Crafting>
+            <Medicine>4</Medicine>
+        </skillRequirements>
+        <ingredients Inherit="False">
+            <li>
+                <filter><categories><li>Medicine</li></categories></filter>
+                <count>2</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter Inherit="False">
+            <categories>
+                <li>Medicine</li>
+            </categories>
+        </fixedIngredientFilter>
+        <modExtensions>
+            <li Class="CortexControl.CCRecipeDefModExtension">
+                <requiredHediffs>
+                    <li>CC_StandardControlChip</li>
+                </requiredHediffs>
+            </li>
+        </modExtensions>
+        <recipeUsers>
+            <li>Human</li>
+            <li MayRequire="Ludeon.RimWorld.Anomaly">CreepJoiner</li>
+        </recipeUsers>
+        <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+        <researchPrerequisite>CC_ChipReprogramming</researchPrerequisite>
+    </RecipeDef>
 
     <!-- ================= Standard Control Chip ================= -->
     
