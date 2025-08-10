@@ -74,7 +74,7 @@
         <label>standard control chip</label>
         <description>A slightly more advanced form of mental domination, the addition of a standard chip allows one to automatically convert and recruit the subject, as the desired information is coded into the chip in advance. Chips like these are commonly used by dictators to absorb the armies and vassals of those they conquer as the chips are cheap to manufacture and have more acceptable downsides. Like many other brain implants, this implant is vulnerable to EMP damage.
 
-Removing the chip is dangerous as it replaces a part of the brain of whomever it is implanted. Its removal will lead to their mental state degrading to that of an animal, and cause mental issues curable only via healer mech serum or implanting a new control chip.</description>
+Removing the chip is dangerous as it replaces a part of the brain of whomever it is implanted. Its removal will lead to their mental state degrading to that of an animal, and cause mental issues curable only via healer mech serum, or "fixable" by adding a control chip or doing brain modification surgery.</description>
         <descriptionHyperlinks>
             <RecipeDef>CC_InstallStandardControlChip</RecipeDef>
         </descriptionHyperlinks>
@@ -93,7 +93,7 @@ Removing the chip is dangerous as it replaces a part of the brain of whomever it
     <RecipeDef ParentName="CC_InstallImplantBase">
         <defName>CC_InstallStandardControlChip</defName>
         <label>install standard control chip</label>
-        <description>Install a standard control chip.</description>
+        <description>Install standard control chip.</description>
         <descriptionHyperlinks>
             <ThingDef>CC_StandardControlChip</ThingDef>
             <HediffDef>CC_StandardControlChip</HediffDef>
@@ -123,7 +123,7 @@ Removing the chip is dangerous as it replaces a part of the brain of whomever it
     <RecipeDef ParentName="CC_RemoveImplantBase">
         <defName>CC_RemoveStandardControlChip</defName>
         <label>remove standard control chip</label>
-        <description>Remove a standard control chip.</description>
+        <description>Remove standard control chip.</description>
         <descriptionHyperlinks>
             <ThingDef>CC_StandardControlChip</ThingDef>
             <HediffDef>CC_StandardControlChip</HediffDef>

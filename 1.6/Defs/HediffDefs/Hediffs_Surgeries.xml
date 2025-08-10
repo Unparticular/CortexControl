@@ -82,6 +82,9 @@ This surgery has many serious downsides and cannot be undone. It can only be cur
         <workAmount>5000</workAmount>
         <deathOnFailedSurgeryChance>0.9</deathOnFailedSurgeryChance>
         <surgerySuccessChanceFactor>0.3</surgerySuccessChanceFactor>
+        <incompatibleWithHediffTags>
+            <li>CC_Implant</li>
+        </incompatibleWithHediffTags>
         <addsHediff>CC_CognitiveRewiring</addsHediff>
         <removesHediff>CC_FracturedMind</removesHediff>
         <skillRequirements>
