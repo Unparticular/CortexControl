@@ -58,11 +58,11 @@
     <RecipeDef ParentName="SurgeryFlesh">
         <defName>CC_ChipReprogramming</defName>
         <label>reprogram control chip</label>
-        <description>Many times when conquering other nations or capturing enemies, people have found those who already had chips implanted in them. Instead of going through the effort of removing the old chip and implanting their own, they developed ways to safely reprogram the chip to change their allegiance.
-
-            Reprogramming control chips is considered to be a hostile action.</description>
+        <description>Many times when conquering other nations or capturing enemies, people have found those who already had chips implanted in them. Instead of going through the effort of removing the old chip and implanting their own, they developed ways to safely reprogram the chip to change their allegiance. \n\nReprogramming control chips is considered to be a hostile action.</description>
         <descriptionHyperlinks>
             <ThingDef>CC_StandardControlChip</ThingDef>
+            <ThingDef>CC_GuidanceChip</ThingDef>
+            <ThingDef>CC_NullChip</ThingDef>
         </descriptionHyperlinks>
         <jobString>Reprogramming control chip.</jobString>
         <appliedOnFixedBodyParts>

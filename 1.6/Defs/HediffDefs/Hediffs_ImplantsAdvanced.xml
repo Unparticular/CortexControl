@@ -107,6 +107,15 @@
             <ThingDef>CC_NullChip</ThingDef>
         </descriptionHyperlinks>
         <spawnThingOnRemoved>CC_NullChip</spawnThingOnRemoved>
+        <comps>
+            <li Class="HediffCompProperties_SkillDecay">
+                <decayPerDayPercentageLevelCurve>
+                    <points>
+                        <li>(0, 0)</li>
+                    </points>
+                </decayPerDayPercentageLevelCurve>
+            </li>
+        </comps>
         <stages>
             <li>
                 <disabledWorkTags>
@@ -115,7 +124,6 @@
                     <li>Animals</li>
                     <li>Social</li>
                 </disabledWorkTags>
-                <workDisables>Social</workDisables>
                 <statFactors>
                     <GlobalLearningFactor>0</GlobalLearningFactor>
                     <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0</CertaintyLossFactor>
