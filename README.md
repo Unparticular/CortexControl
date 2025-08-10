@@ -6,7 +6,7 @@ A mod for RimWorld to allow for forced recruitment of hostile pawns.
 ## Description
 This mod has a slight dependency on Anomaly for reducing skill levels, but should still work fine outside a slight change in balance.
 
-Transform your RimWorld experience with **Cortex Control**! This unique addition introduces a new surgery and three powerful implants designed to brainwash hostile pawns into adopting your ideology and joining your faction, regardless of their previous loyalty.
+Transform your RimWorld experience with **Cortex Control**! This unique addition introduces a new surgery and three powerful implants designed to brainwash pawns into adopting your ideology and joining your faction, regardless of their previous loyalty.
 
 ### 🛠️ Implants Overview
 
@@ -22,26 +22,26 @@ Transform your RimWorld experience with **Cortex Control**! This unique addition
 #### **Cognitive Rewiring Surgery**
 This surgery rewires critical brain areas to enforce loyalty, often used by the ruling class in corporate-run urbworlds. While it offers a cheap solution for labor acquisition, it comes with severe risks and irreversible effects.
 
-- **Description**: A relatively primitive method of mental domination, this surgery rewires some parts of the brain to make the individual easier to manipulate by disabling and modifying certain portions relevant to memory and loyalty.
-- **Downsides**: High chance of death, large reduction in learning speed, reduction of skill levels, x0.8 consciousness multipler, severely reduced social skills, significantly higher social fight chance, will wander confused occasionally, inability to get inspirations.
+- **Positives**: Very cheap as it only costs 3 medicine and doesn't leave a wealth adding implant in the brain, high certainty loss factor for easy converting.
+- **Negatives**: High chance of death, large reduction in learning speed, reduction of skill levels, x0.8 consciousness multipler, severely reduced social skills, significantly higher social fight chance, will wander confused occasionally, inability to get inspirations.
 
 #### **Standard Control Chip**
-A more sophisticated implant that allows for immediate recruitment and conversion to your ideology. This chip is favored by dictators for its efficiency and lower risks compared to Cognitive Rewiring.
+A more sophisticated form of control that allows for immediate recruitment and conversion to your ideology. This chip is favored by dictators for its cost efficiency and lower risks compared to Cognitive Rewiring.
 
-- **Description**: The standard form of mental domination, this chip allows one to automatically convert and recruit the subject, as the desired information is coded into the chip in advance.
-- **Downsides**: Reduction in learning speed, reduction of 1 level to all skills, x0.9 consciousness multipler, reduced social skills, higher social fight chance, will rarely wander confused, inability to get inspirations.
+- **Positives**: 0 certainty loss factor, cheapest chip available, allows for automatic brainwashing despite its inexpensiveness.
+- **Negatives**: Reduction in learning speed, reduction of 1 level to all skills, x0.9 consciousness multipler, reduced social skills, higher social fight chance, will wander confused rarely, inability to get inspirations.
 
 #### **Guidance Chip**
-This chip represents one of the most advanced forms of mental domination, allowing for passive regulation while providing a degree of free will. It is often used on individuals who are deemed unrehabilitatable.
+One of the most advanced forms of mental domination, this chip allowing for passive regulation while providing a degree of free will. It is often used on individuals who are deemed unrehabilitatable to spare them from execution.
 
-- **Description**: The guidance chip allows for more free will due to its passive methods of regulation. It is rumored to be used by the Empire to prevent betrayal among nobles.
-- **Downsides**: Slight reduction to learning speed, inability to get inspirations.
+- **Positives**: Reduced social fight chance, reduced certainty loss factor.
+- **Negatives**: Slight reduction to learning speed, inability to get inspirations, free will.
 
 #### **Null Chip**
-This chip effectively nullifies the individual's emotions and needs, creating a soldier devoid of pain and emotions. While it has been outlawed in many regions due to its brutality, it remains popular in the shadows for the creation of elite units.
+This chip effectively nullifies the individual's emotions and needs, creating a soldier devoid of pain and emotions. While it has been outlawed in many regions due to its brutality, it remains popular in the shadows for the creation of elite military units.
 
-- **Description**: The null chip turns the individual into a machine, incapable of creativity, communication, or analytical reasoning. It is immune to EMP damage and prevents the individual from feeling pain or experiencing emotions.
-- **Downsides**: Severe cognitive limitations, inability to learn new skills.
+- **Positives**: No needs outside of food and sleep, 0 social fight chance, no opinion of other pawns, 0 certainty loss factor.
+- **Negatives**: Severe work limitations, inability to learn new skills, inability to get inspirations.
 
 ### ⚠️ Chip Removal and Reprogramming
 All chips, including the **Standard Control Chip**, **Guidance Chip**, and **Null Chip**, have a **dangerous removal process** that can lead to severe mental degradation. Removing these implants is risky and will result in the individual’s mental state degrading to that of an animal. However, all chips can be **reprogrammed**, including chips already implanted in guests and prisoners, at the cost of angering other factions.
@@ -64,11 +64,14 @@ Most likely? This mod shouldn't be touching anything related to combat extended 
 #### Why does reducing skill levels require Anomaly?
 This mod uses aptitudes for reducing skill levels via hediffs, and for some reason that isn't part of the base game and is instead DLC locked to anomaly.
 
+#### I have an idea for your mod!
+Great! Write your idea in a comment so that I can see it! This is my first mod, so all feedback about literally anything is extra valuable.
+
 ### Future Plans
 
 - Ideology precept integration
 - Royalty noble wimp and other empire pawn integration
-- Making implanted pawns either have 0 resistance (after rearrest), be extra hard to recruit, or be unrecruitable depending on implant/surgery.
+- Making implanted pawns either have 0 resistance, be extra hard to recruit, or be unrecruitable depending on implant/surgery after rearrest.
 - Archotech control chip
 - EPOE, GiTS Cyberbrains, other bionics mod integrations
 
