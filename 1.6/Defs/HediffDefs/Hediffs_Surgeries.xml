@@ -45,6 +45,10 @@
                     <MentalBreakThreshold>0.15</MentalBreakThreshold>
                     <SocialImpact>-0.50</SocialImpact>
                     <NegotiationAbility>-0.25</NegotiationAbility>
+                    <TradePriceImprovement>-0.25</TradePriceImprovement> 
+                    <ArrestSuccessChance>-0.25</ArrestSuccessChance> 
+                    <SuppressionPower MayRequire="Ludeon.RimWorld.Ideology">-0.25</SuppressionPower>
+                    <ConversionPower MayRequire="Ludeon.RimWorld.Ideology">-0.25</ConversionPower>
                 </statOffsets>
                 <mentalStateGivers>
                     <li>

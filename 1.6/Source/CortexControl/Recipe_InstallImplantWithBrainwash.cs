@@ -15,39 +15,27 @@ namespace CortexControl
             Bill bill)
         {
             base.ApplyOnPawn(patient, part, surgeon, ingredients, bill);
-            if (!patient.Dead)
-            {
-                ConvertPawn(patient, surgeon); 
-                RecruitPawn(patient, surgeon);
-            }
+            if (patient.Dead) return;
+            ConvertPawn(patient, surgeon); 
+            RecruitPawn(patient, surgeon);
         }
         
-        private void RecruitPawn(Pawn patient, Pawn surgeon)
+        private static void RecruitPawn(Pawn patient, Pawn surgeon)
         {
+            if (patient.Faction == surgeon.Faction) return;
             Log.Message("Faction set for patient: " + patient.Name + " to " + surgeon.Faction);
-            if (patient.guest != null)
-            {
-                patient.guest.SetGuestStatus(null);
-            }
-            if (patient.Faction != surgeon.Faction)
-            {
-                patient.SetFaction(surgeon.Faction, surgeon);
-            }
-            if (patient.guest != null)
-            {
-                patient.guest.Notify_PawnRecruited();
-            }
+            patient.guest?.SetGuestStatus(null);
+            patient.guest?.Notify_PawnRecruited();
+            patient.SetFaction(surgeon.Faction, surgeon);
             InteractionWorker_RecruitAttempt.DoRecruit(surgeon, patient);
         }
 
-        private void ConvertPawn(Pawn patient, Pawn surgeon)
+        private static void ConvertPawn(Pawn patient, Pawn surgeon)
         {
-            if (ModLister.IdeologyInstalled)
-            {
-                Log.Message("Ideology set for patient: " + patient.Name + " to " + surgeon.Ideo);
-                patient.ideo.SetIdeo(surgeon.Ideo);
-                patient.ideo.OffsetCertainty(100);
-            }
+            if (!ModLister.IdeologyInstalled) return;
+            Log.Message("Ideology set for patient: " + patient.Name + " to " + surgeon.Ideo);
+            patient.ideo.SetIdeo(surgeon.Ideo);
+            patient.ideo.OffsetCertainty(100);
         }
     }
 }
