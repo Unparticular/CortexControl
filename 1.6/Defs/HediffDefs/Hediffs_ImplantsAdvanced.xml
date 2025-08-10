@@ -36,13 +36,7 @@
     <ThingDef ParentName="BodyPartBionicBase">
         <defName>CC_GuidanceChip</defName>
         <label>guidance chip</label>
-        <description>The guidance chip, along with the null chip, is one of most advanced forms of mental domination created by man. As this chip allows for more free will due to the use of only passive methods of regulation, many glitterworlds feel comfortable using these chips on criminals who would otherwise be unrehabilitatable as an alternative to execution or life in prison. This leaves the chips with very few downsides and makes it significantly harder to detect externally, so diplomats and high ranking officials are commonly checked to make sure that they haven't secretly been implanted with one of these chips.
-
-There are rumors that the Empire has been descretely implanting these chips into nobles with certain "tendencies" as a means to slow down and prevent betrayal through a combination of the chip's passive control and routine external reprogramming.
-
-Due to the more passive nature of this chip, individuals that have this chip planted in them have a higher quantity of free will after their initial reprogramming. Given enough time, this lets them be eventually converted to other ideologies or recruited into other factions without the use of any reprogramming, unlike other chips which actively attempt to prevent disloyalty through various means.
-
-Removing the chip is dangerous as it replaces a part of the brain of whomever it is implanted. Its removal will lead to their mental state degrading to that of an animal, and cause mental issues curable only via healer mech serum or "fixable" by adding a control chip or doing brain modification surgery.</description>
+        <description>The guidance chip, along with the null chip, is one of most advanced forms of mental domination created by man. As this chip allows for more free will due to the use of only passive methods of regulation, many glitterworlds feel comfortable using these chips on criminals who would otherwise be unrehabilitatable as an alternative to execution or life in prison. This leaves the chips with very few downsides and makes it significantly harder to detect externally, so diplomats and high ranking officials are commonly checked to make sure that they haven't secretly been implanted with one of these chips. \n\nThere are rumors that the Empire has been descretely implanting these chips into nobles with certain "tendencies" as a means to slow down and prevent betrayal through a combination of the chip's passive control and routine external reprogramming. \n\nDue to the more passive nature of this chip, individuals that have this chip planted in them have a higher quantity of free will after their initial reprogramming. Given enough time, this lets them be eventually converted to other ideologies or recruited into other factions without the use of any reprogramming, unlike other chips which actively attempt to prevent disloyalty through various means. \n\nRemoving the chip is dangerous as it replaces a part of the brain of whomever it is implanted. Its removal will lead to their mental state degrading to that of an animal, and cause mental issues curable only via healer mech serum, or "fixable" by adding a control chip or doing brain modification surgery.</description>
         <descriptionHyperlinks>
             <RecipeDef>CC_InstallGuidanceChip</RecipeDef>
         </descriptionHyperlinks>
@@ -67,7 +61,6 @@ Removing the chip is dangerous as it replaces a part of the brain of whomever it
             <HediffDef>CC_GuidanceChip</HediffDef>
         </descriptionHyperlinks>
         <jobString>Installing guidance chip.</jobString>
-        <surgerySuccessChanceFactor>0.9</surgerySuccessChanceFactor>
         <addsHediff>CC_GuidanceChip</addsHediff>
         <ingredients>
             <li>
@@ -98,5 +91,124 @@ Removing the chip is dangerous as it replaces a part of the brain of whomever it
         </descriptionHyperlinks>
         <jobString>Removing guidance chip.</jobString>
         <removesHediff>CC_GuidanceChip</removesHediff>
+    </RecipeDef>
+
+
+    <!-- ================= Null Chip ================= -->
+
+    <!-- ================= Null Chip HediffDef ================= -->
+
+    <HediffDef ParentName="CC_ImplantHediffBase">
+        <defName>CC_NullChip</defName>
+        <label>null chip</label>
+        <labelNoun>a null chip</labelNoun>
+        <description>nothing.</description>
+        <descriptionHyperlinks>
+            <ThingDef>CC_NullChip</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>CC_NullChip</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <disabledWorkTags>
+                    <li>Intellectual</li>
+                    <li>Artistic</li>
+                    <li>Animals</li>
+                    <li>Social</li>
+                </disabledWorkTags>
+                <workDisables>Social</workDisables>
+                <statFactors>
+                    <GlobalLearningFactor>0</GlobalLearningFactor>
+                    <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0</CertaintyLossFactor>
+                </statFactors>
+                <capMods>
+                    <li>
+                        <capacity>Talking</capacity>
+                        <postFactor>0</postFactor>
+                    </li>
+                    <li>
+                        <capacity>Hearing</capacity>
+                        <postFactor>0</postFactor>
+                    </li>
+                </capMods>
+                <blocksInspirations>true</blocksInspirations>
+                <blocksMentalBreaks>true</blocksMentalBreaks>
+                <socialFightChanceFactor>0</socialFightChanceFactor>
+                <painFactor>0</painFactor>
+                <opinionOfOthersFactor>0</opinionOfOthersFactor>
+                <disablesNeeds>
+                    <li>Mood</li>
+                    <li>Rest</li>
+                    <li>Beauty</li>
+                    <li>Outdoors</li>
+                    <li>Comfort</li>
+                    <li>DrugDesire</li>
+                    <li>Indoors</li>
+                    <li>Joy</li>
+                    <li>KillThirst</li>
+                </disablesNeeds>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!-- ================= Null Chip ThingDef ================= -->
+
+    <ThingDef ParentName="BodyPartBionicBase">
+        <defName>CC_NullChip</defName>
+        <label>null chip</label>
+        <description>This chip, along with the guidance chip, is one of the most advanced forms of mental domination created by man. This chip effectively kills the individual, turning them into a machine which cannot feel pain, has no need for sleep, and lacks all emotions. While it has been outlawed by many places due to its brutal nature, it can still be commonly found in elite military units across many worlds due to its sheer effectiveness in creating what many consider to be perfect soldiers. \n\nUnfortunately due ot the nature of the chip, individuals that have this chip planted in them become incapable of work that require creativity, communication, or analytical reasoning, and cannot learn new things to as a means to prevent insubordination. Likewise, they will also not forget anything that they have already learned. This chip is immune to EMP damage. \n\nRemoving the chip is dangerous as it replaces a part of the brain of whomever it is implanted. Its removal will lead to their mental state degrading to that of an animal, and cause mental issues curable only via healer mech serum, or "fixable" by adding a control chip or doing brain modification surgery.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>CC_InstallNullChip</RecipeDef>
+        </descriptionHyperlinks>
+        <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+        <costList>
+            <Plasteel>15</Plasteel>
+            <ComponentSpacer>8</ComponentSpacer>
+        </costList>
+        <recipeMaker>
+            <researchPrerequisite>CC_AdvancedControl</researchPrerequisite>
+        </recipeMaker>
+    </ThingDef>
+
+    <!-- ================= Install Null Chip ================= -->
+
+    <RecipeDef ParentName="CC_InstallImplantBase">
+        <defName>CC_InstallNullChip</defName>
+        <label>install null chip</label>
+        <description>Install null chip.</description>
+        <descriptionHyperlinks>
+            <ThingDef>CC_NullChip</ThingDef>
+            <HediffDef>CC_NullChip</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Installing null chip.</jobString>
+        <addsHediff>CC_NullChip</addsHediff>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>CC_NullChip</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>CC_NullChip</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+    </RecipeDef>
+
+    <!-- ================= Remove Null Chip ================= -->
+
+    <RecipeDef ParentName="CC_RemoveImplantBase">
+        <defName>CC_RemoveNullChip</defName>
+        <label>remove null chip</label>
+        <description>Remove null chip.</description>
+        <descriptionHyperlinks>
+            <ThingDef>CC_NullChip</ThingDef>
+            <HediffDef>CC_NullChip</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Removing null chip.</jobString>
+        <removesHediff>CC_NullChip</removesHediff>
     </RecipeDef>
 </Defs>

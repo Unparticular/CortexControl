@@ -93,6 +93,8 @@
             <li Class="CortexControl.CCRecipeDefModExtension">
                 <requiredHediffs>
                     <li>CC_StandardControlChip</li>
+                    <li>CC_GuidanceChip</li>
+                    <li>CC_NullChip</li>
                 </requiredHediffs>
             </li>
         </modExtensions>
