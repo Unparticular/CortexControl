@@ -151,7 +151,7 @@
                     <li>DrugDesire</li>
                     <li>Indoors</li>
                     <li>Joy</li>
-                    <li>KillThirst</li>
+                    <li MayRequire="Ludeon.RimWorld.Biotech">KillThirst</li>
                 </disablesNeeds>
             </li>
         </stages>
