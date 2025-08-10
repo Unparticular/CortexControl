@@ -26,6 +26,11 @@ namespace CortexControl
             }
             patient.health.RemoveHediff(hediff);
             patient.health.AddHediff(recipe.addsHediff, part);
+            patient.ChangeKind(PawnKindDefOf.WildMan);
+            if (patient.Faction != null)
+            {
+                patient.SetFaction(null);
+            }
         }
         
         private void IsCCRemoveViolation(Pawn patient, BodyPartRecord part, Pawn surgeon, bool surgeryFailed)
