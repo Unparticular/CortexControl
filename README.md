@@ -1,3 +1,6 @@
+# IMPORTANT NOTICE
+My steam account was locked because steam believes that I was account sharing (I wasn't), and because of that I can no longer update the mod on steam. Apparently there is no way to appeal this, so I'll either have to make a new account and repurchase the game in order to make uploads or I'll have to have someone else make uploads for me. If someone is interested in reuploading my mod let me know on discord @unparticular. I will still be making updates here for the time being.
+
 # Cortex Control
 ![Preview.png](About/Preview.png)
 
