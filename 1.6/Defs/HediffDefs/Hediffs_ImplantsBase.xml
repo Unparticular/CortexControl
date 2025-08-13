@@ -39,7 +39,7 @@
         </appliedOnFixedBodyParts>
         <addsHediff>CC_FracturedMind</addsHediff>
         <deathOnFailedSurgeryChance>0.4</deathOnFailedSurgeryChance>
-        <surgerySuccessChanceFactor>0.7</surgerySuccessChanceFactor>
+        <surgerySuccessChanceFactor>0.4</surgerySuccessChanceFactor>
         <ingredients Inherit="False">
             <li>
                 <filter><categories><li>Medicine</li></categories></filter>
