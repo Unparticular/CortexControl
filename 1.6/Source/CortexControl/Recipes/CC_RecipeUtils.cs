@@ -9,6 +9,7 @@ namespace CortexControl
     {
         public static void BrainwashPawn(Pawn patient, Pawn surgeon)
         {
+            if (surgeon == null) return;
             RecruitPawn(patient, surgeon);
             ConvertPawn(patient, surgeon);
         }

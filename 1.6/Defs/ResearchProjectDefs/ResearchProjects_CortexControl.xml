@@ -14,6 +14,8 @@
         <techLevel>Industrial</techLevel>
         <hiddenPrerequisites>
             <li>MicroelectronicsBasics</li>
+            <li MayRequire="vat.epoeforked">BrainSurgery</li>
+            <li MayRequire="Rah.RBSE, Rah.RBSEHC">Neuroscience</li>
         </hiddenPrerequisites>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <researchViewX>0</researchViewX>
@@ -27,6 +29,10 @@
         <description>A relatively primitive method of mental domination, this surgery rewires some parts of the brain to control the individual, disabling and modifying certain portions relevant to memory and loyalty.</description>
         <baseCost>700</baseCost>
         <techLevel>Medieval</techLevel>
+        <hiddenPrerequisites>
+            <li MayRequire="vat.epoeforked">BrainSurgery</li>
+            <li MayRequire="Rah.RBSE, Rah.RBSEHC">Neuroscience</li>
+        </hiddenPrerequisites>
         <researchViewX>0</researchViewX>
         <researchViewY>3</researchViewY>
     </ResearchProjectDef>

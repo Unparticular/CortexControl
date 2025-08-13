@@ -13,14 +13,19 @@
 	<HugsLib.UpdateFeatureDef ParentName="CCUpdateFeatureBase">
 		<defName>CortexControl_0.2.0</defName>
 		<assemblyVersion>0.2.0</assemblyVersion>
-		<content><![CDATA[Update which adds Royalty integration to the mod and rebalances some implants
+		<content><![CDATA[Update which adds Royalty and other mod integration to the mod and rebalances some implants.
 			|
 			|<b>Release Notes:</b>
 <size=14><b>-</b> Noble Wimps are now guaranteed have a Guidance Chip implanted in them, so if you want to quickly acquire a decent psycaster at the cost of angering the Empire you can simply reprogram them.
-<b>-</b> Empire pawns will now randomly have Null and Guidance implants in their brains. 
+<b>-</b> Stellarchs are now guaranteed to have a Guidance Chip implanted in them.
+<b>-</b> Cataphracts are now guaranteed to have a Null Chip implanted in them.
+<b>-</b> All other empire pawns will now randomly have Null and Guidance implants in their brains. 
 <b>-</b> Guidance implant no longer blocks inspirations.
 <b>-</b> Null implant now improves combat abilities slightly.
 <b>-</b> Increased chance of failure on chip removal.
+<b>-</b> Made Fractured Mind increase forget speed significantly and Cognitive Rewiring increase forget speed slightly.
+<b>-</b> Basic EPOE and RBSE Integration.
+<b>-</b> Improved C# code
 </size>]]></content>
 	</HugsLib.UpdateFeatureDef>
 </Defs>

@@ -11,18 +11,20 @@ namespace CortexControl
         public override void ApplyOnPawn(Pawn patient, BodyPartRecord part, Pawn surgeon, List<Thing> ingredients, Bill bill)
         {
             MedicalRecipesUtility.IsClean(patient, part);
-            if (surgeon == null) return;
-            bool surgeryFailed = CheckSurgeryFail(surgeon, patient, ingredients, part, bill);
-            IsCCRemoveViolation(patient, part, surgeon, surgeryFailed);
-            if (surgeryFailed) return;
-            TaleRecorder.RecordTale(TaleDefOf.DidSurgery, surgeon, patient);
-            if (!patient.health.hediffSet.GetNotMissingParts().Contains(part))  return;
-
-            Hediff hediff = patient.health.hediffSet.hediffs.FirstOrDefault((Hediff x) => x.def == recipe.removesHediff);
+            Hediff hediff =
+                patient.health.hediffSet.hediffs.FirstOrDefault((Hediff x) => x.def == recipe.removesHediff);
             if (hediff == null) return;
-            if (hediff.def.spawnThingOnRemoved != null)
+            if (surgeon != null)
             {
-                GenSpawn.Spawn(hediff.def.spawnThingOnRemoved, surgeon.Position, surgeon.Map);
+                bool surgeryFailed = CheckSurgeryFail(surgeon, patient, ingredients, part, bill);
+                IsCCRemoveViolation(patient, part, surgeon, surgeryFailed);
+                if (surgeryFailed) return;
+                TaleRecorder.RecordTale(TaleDefOf.DidSurgery, surgeon, patient);
+                if (!patient.health.hediffSet.GetNotMissingParts().Contains(part)) return;
+                if (hediff.def.spawnThingOnRemoved != null)
+                {
+                    GenSpawn.Spawn(hediff.def.spawnThingOnRemoved, surgeon.Position, surgeon.Map);
+                }
             }
             patient.health.RemoveHediff(hediff);
             patient.health.AddHediff(recipe.addsHediff, part);
