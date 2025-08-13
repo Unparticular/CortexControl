@@ -24,6 +24,15 @@
             <Medicine>-4</Medicine>
             <Social>-4</Social>
         </aptitudes>
+        <comps>
+            <li Class="HediffCompProperties_SkillDecay">
+                <decayPerDayPercentageLevelCurve>
+                    <points>
+                        <li>(0, 0.05)</li>
+                    </points>
+                </decayPerDayPercentageLevelCurve>
+            </li>
+        </comps>
         <stages>
             <li>
                 <disabledWorkTags>

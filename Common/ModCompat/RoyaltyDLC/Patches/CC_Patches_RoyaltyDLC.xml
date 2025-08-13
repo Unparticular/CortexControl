@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/PawnKindDef[@Name="ImperialFighterBase"]</xpath>
+        <value>
+            <techHediffsTags>
+                <li>CC_NullChip</li>
+            </techHediffsTags>
+        </value>
+    </Operation>
+    
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/PawnKindDef[@Name="CataphractBase"]</xpath>
+        <value>
+            <techHediffsRequired>
+                <li>CC_NullChip</li>
+            </techHediffsRequired>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/PawnKindDef[@Name="RoyalBase"]</xpath>
+        <value>
+            <techHediffsTags>
+                <li>CC_GuidanceChip</li>
+            </techHediffsTags>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/PawnKindDef[@Name="RoyalBase"]</xpath>
+        <value>
+            <techHediffsDisallowTags>
+                <li>CC_NullChip</li>
+                <li></li>
+            </techHediffsDisallowTags>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/PawnKindDef[defName="Empire_Royal_NobleWimp"]</xpath>
+        <value>
+            <techHediffsRequired>
+                <li>CC_GuidanceChip</li>
+            </techHediffsRequired>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/PawnKindDef[defName="Empire_Royal_Stellarch"]</xpath>
+        <value>
+            <techHediffsRequired>
+                <li>CC_GuidanceChip</li>
+            </techHediffsRequired>
+        </value>
+    </Operation>
+</Patch>

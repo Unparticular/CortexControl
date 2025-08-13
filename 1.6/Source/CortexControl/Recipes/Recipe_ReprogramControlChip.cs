@@ -19,7 +19,7 @@ namespace CortexControl
 
     public override void ApplyOnPawn(Pawn patient, BodyPartRecord part, Pawn surgeon, List<Thing> ingredients, Bill bill)
     {
-      if (CheckSurgeryFail(surgeon, patient, ingredients, part, bill))
+      if (surgeon == null || CheckSurgeryFail(surgeon, patient, ingredients, part, bill))
       {
         return;
       }
