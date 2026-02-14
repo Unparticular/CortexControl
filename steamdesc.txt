@@ -1,0 +1,97 @@
+[h1]Description:[/h1]
+Transform your RimWorld experience with [b]Cortex Control[/b]! This mod introduces a new surgery and three craftable implants designed to brainwash pawns into adopting your ideology and joining your faction, regardless of their previous loyalty.
+
+This mod has a slight dependency on Anomaly for reducing skill levels, but should still work fine outside a slight change in balance.
+
+[h1]🛠️ Implants Overview:[/h1]
+
+[table]
+[tr][th]Implant Name[/th][th]Description[/th][th]Key Features[/th][th]Crafting Requirements[/th][/tr]
+[tr][td][b]Cognitive Rewiring Surgery[/b][/td][td]A primitive method of mental domination, rewires the brain to make them easier to manipulate.[/td][td]- High chance of death - Prevents inspirations - Multiplies consciousness by 0.8 - Increases mental break threshold by 15% - Removes unwavering loyalty - Certainty loss multiplier of 500% - Reduces skill levels drastically[/td][td]Requires Basic Control research (700 points)[/td][/tr]
+[tr][td][b]Standard Control Chip[/b][/td][td]An advanced chip that automatically converts and recruits subjects.[/td][td]- Prevents inspirations - Multiplies consciousness by 0.9 - Certainty loss set to 0% - Learning speed multiplier of 0.65 - Reduces skill levels by 1[/td][td]Requires Standard Control research (1200 points), 4 basic components, 15 steel[/td][/tr]
+[tr][td][b]Guidance Chip[/b][/td][td]A sophisticated chip that allows for passive regulation and some level of free will.[/td][td]- Prevents inspirations - Global learning factor of 0.95 - Certainty loss factor of 0.25 - Reduced social fight chance[/td][td]Requires Advanced Control research (2200 points), 4 advanced components, 15 plasteel[/td][/tr]
+[tr][td][b]Null Chip[/b][/td][td]A brutal chip that nullifies pain and emotions, creating perfect soldiers.[/td][td]- Immune to pain and emotions - Disables social, artistic, animals, and intellectual work - Cannot learn new skills, will not forget skills[/td][td]Requires Advanced Control research (2200 points), 8 advanced components, 15 plasteel[/td][/tr]
+[/table]
+
+[h1]🧬 Implant Details:[/h1]
+
+[h2]Cognitive Rewiring Surgery[/h2]
+
+A relatively primitive method of mental domination, this surgery rewires some parts of the brain to make the individual easier to manipulate by disabling and modifying certain portions relevant to memory and loyalty. Often used by the ruling class in corporate-run urbworlds, while it offers a cheap solution for labor acquisition, it comes with severe risks and irreversible effects.
+[list][*][b]Positives[/b]: Very cheap as it only costs 3 medicine and doesn't leave a wealth adding implant in the brain, high certainty loss factor for easy converting.
+[*][b]Negatives[/b]: High chance of death, large reduction in learning speed, reduction of skill levels, x0.8 consciousness multipler, severely reduced social skills, significantly higher social fight chance, will wander confused occasionally, inability to get inspirations.
+[/list]
+
+[h2]Standard Control Chip[/h2]
+
+A more sophisticated form of control that allows for immediate recruitment and conversion to your ideology. This chip is favored by dictators for its cost efficiency and lower risks compared to Cognitive Rewiring.
+[list][*][b]Positives[/b]: 0 certainty loss factor, cheapest chip available, allows for automatic brainwashing despite its inexpensiveness.
+[*][b]Negatives[/b]: Reduction in learning speed, reduction of 1 level to all skills, x0.9 consciousness multipler, reduced social skills, higher social fight chance, will wander confused rarely, inability to get inspirations.
+[/list]
+
+[h2]Guidance Chip[/h2]
+
+One of the most advanced forms of mental domination, this chip allowing for passive regulation while providing a degree of free will. It is often used on individuals who are deemed unrehabilitatable to spare them from execution.
+[list][*][b]Positives[/b]: Reduced social fight chance, reduced certainty loss factor.
+[*][b]Negatives[/b]: Slight reduction to learning speed, inability to get inspirations, free will.
+[/list]
+
+[h2]Null Chip[/h2]
+
+This chip effectively nullifies the individual's emotions and needs, creating a soldier devoid of pain and emotions. While it has been outlawed in many regions due to its brutality, it remains popular in the shadows for the creation of elite military units.
+[list][*][b]Positives[/b]: No needs outside of food and sleep, will not initiate social fights, no opinion of other pawns, 0 certainty loss factor.
+[*][b]Negatives[/b]: Severe work limitations, inability to learn new skills, inability to get inspirations.
+[/list]
+
+[h1]⚠️ Chip Removal and Reprogramming [/h1]
+
+Due to how the chips integrate themselves within the brains of the person they are implanted in, all chips have a [b]dangerous removal process[/b] that can lead to severe mental degradation.
+
+However, due to their mechanical nature, all chips can also be [b]reprogrammed[/b]. This includes chips already implanted in guests and prisoners, at the cost of angering the factions they belong to.
+
+
+With CortexControl, you can reshape your RimWorld narrative, turning enemies into loyal allies through the power of technology. Embrace the power of mental domination and expand your faction like never before!
+
+[b]⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[/b]
+
+[h3]Q/A[/h3]
+
+[b]Why did you create this mod?[/b]
+I found myself unsatisfied with the current offerings for brainwashing, as I wanted a way to control people with some sort of implant instead of torture or psycasts because that made more sense for my roleplaying.
+
+[b]Can I freely add/remove this to my save?[/b]
+You can add this at any point, but removing it might cause issues. I didn't get any serious issues when I removed it in my testing, but I still wouldn't recommend it.
+
+[b]Is this CE compatible?[/b]
+Most likely? This mod shouldn't be touching anything related to combat extended as it mainly deals with recruitment mechanics and non combat related downsides (outside of reducing skill levels/consciousness).
+
+[b]Why does reducing skill levels require Anomaly?[/b]
+This mod uses aptitudes for reducing skill levels via hediffs, and for some reason that isn't part of the base game and is instead DLC locked to Anomaly.
+
+[b]I have an idea for your mod![/b]
+Great! Write your idea in a comment so that I can see it! This is my first mod, so all feedback about literally anything is extra valuable.
+
+[h3]Future Plans[/h3]
+[list][*]Ideology precept integration
+[*]Royalty noble wimp and other empire pawn integration
+[*]Making implanted pawns either have 0 resistance, be extra hard to recruit, or be unrecruitable depending on implant/surgery after rearrest.
+[*]Archotech control chip
+[*]EPOE, GiTS Cyberbrains, other bionics mod integrations
+[*]Geneva Checklist and Vanilla Achievements Expanded integrations
+[/list]
+
+[h3]Known Bugs[/h3]
+[list][*]None as of now.
+[/list]
+
+[h3]Bug Reporting[/h3]
+I haven't set up a good way to do this yet, but for now just mention it in the comments with steps to reproduce it or report it on github.
+
+Git repo: [url=https://github.com/Unparticular/CortexControl]https://github.com/Unparticular/CortexControl[/url]
+
+Preview attribution: 
+Brain image: [url=https://pixabay.com/users/htchnm-14967706/]https://pixabay.com/users/htchnm-14967706/[/url] 
+Computer chip image: [url=https://www.vecteezy.com/free-png/computer-chip]https://www.vecteezy.com/free-png/computer-chip[/url]
+
+Thanks to #mod-development in the Rimworld discord for helping me solve my incredibly dumb problems.
+
