@@ -1,6 +1,3 @@
-# IMPORTANT NOTICE
-My steam account was locked because steam believes that I was account sharing (I wasn't), and because of that I can no longer update the mod on steam. Apparently there is no way to appeal this, so I'll either have to make a new account and repurchase the game in order to make uploads or I'll have to have someone else make uploads for me. If someone is interested in reuploading my mod let me know on discord @unparticular. I will still be making updates here for the time being.
-
 # Cortex Control
 ![Preview.png](About/Preview.png)
 
@@ -17,8 +14,8 @@ Transform your RimWorld experience with **Cortex Control**! This unique addition
 |---------------------------|-----------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
 | **Cognitive Rewiring Surgery** | A primitive method of mental domination, rewires the brain to make them easier to manipulate. | - High chance of death<br>- Prevents inspirations<br>- Multiplies consciousness by 0.8<br>- Increases mental break threshold by 15%<br>- Removes unwavering loyalty<br>- Certainty loss multiplier of 500% <br> - Reduces skill levels drastically | Requires Basic Control research (700 points)                                         |
 | **Standard Control Chip**  | An advanced chip that automatically converts and recruits subjects.                           | - Prevents inspirations<br>- Multiplies consciousness by 0.9<br>- Certainty loss set to 0%<br>- Learning speed multiplier of 0.65 <br> - Reduces skill levels by 1                                                                                 | Requires Standard Control research (1200 points),  4 basic components, 15 steel      |
-| **Guidance Chip**         | A sophisticated chip that allows for passive regulation and free will.                        | - Prevents inspirations<br>- Global learning factor of 0.95<br>- Certainty loss factor of 0.25<br>- Reduced social fight chance                                                                                                                    | Requires Advanced Control research (2200 points), 4 advanced components, 15 plasteel |
-| **Null Chip**             | A brutal chip that nullifies emotions and needs, creating perfect soldiers.                   | - Immune to pain and emotions<br> - Disables social, artistic, animals, and intellectual work<br> - Cannot learn new skills, will not forget skills                                                                                                | Requires Advanced Control research (2200 points), 8 advanced components, 15 plasteel |
+| **Guidance Chip**         | A sophisticated chip that allows for passive regulation and free will.                        | -Global learning factor of 0.9 <br>- Certainty loss factor of 0.25<br>- Reduced social fight chance                                                                                                                    | Requires Advanced Control research (2200 points), 4 advanced components, 15 plasteel |
+| **Null Chip**             | A brutal chip that nullifies emotions and needs, creating perfect soldiers.                   | - Immune to pain and emotions<br> - Disables social, artistic, animals, and intellectual work<br> - Cannot learn new skills                                                                                                | Requires Advanced Control research (2200 points), 8 advanced components, 15 plasteel |
 
 ### 🧬 Implant Details
 
@@ -62,32 +59,37 @@ I found myself unsatisfied with the current offerings for brainwashing, as I wan
 You can add this at any point, but removing it might cause issues. I didn't get any serious issues when I removed it in my testing, but I still wouldn't recommend it.
 
 #### Is this CE compatible?
-Most likely? This mod shouldn't be touching anything related to combat extended as it mainly deals with recruitment mechanics and non combat related downsides (outside of reducing skill levels/consciousness).
+Most likely? This mod shouldn't be touching anything seriously related to combat extended as it mainly deals with recruitment mechanics and non combat related downsides (outside of reducing skill levels/consciousness).
 
 #### Why does reducing skill levels require Anomaly?
-This mod uses aptitudes for reducing skill levels via hediffs, and for some reason that isn't part of the base game and is instead DLC locked to anomaly.
+This mod uses aptitudes for reducing skill levels via hediffs, and for some reason that isn't part of the base game and is instead DLC locked to Anomaly.
 
 #### I have an idea for your mod!
-Great! Write your idea in a comment so that I can see it! This is my first mod, so all feedback about literally anything is extra valuable.
+Great! Write your idea down in a comment or on Github as a feature request so I can see it!
 
 ### Future Plans
-
 - Ideology precept integration
-- Royalty noble wimp and other empire pawn integration
 - Making implanted pawns either have 0 resistance, be extra hard to recruit, or be unrecruitable depending on implant/surgery after rearrest.
 - Archotech control chip
 - EPOE, GiTS Cyberbrains, other bionics mod integrations
 
 ### Known Bugs
+- Null chip does not stop skill decay (might just fix by allowing reduced learning speed instead of incapablity).
+- Generation of chip in faction leaders causes issues when visiting. 
 
-- None as of now.
+### Added Features
+- Royalty noble wimp and other empire pawn integration
 
 ### Bug Reporting
+I don't have a great way to do this, but making a Github issue will led me see it more quickly.
 
-I haven't set up a good way to do this yet, but for now just mention it in the comments with how to reproduce it or report it on github.
+Steam Workshop URL: https://steamcommunity.com/sharedfiles/filedetails/?id=3666283986
 
-Git repo: https://github.com/Unparticular/CortexControl
-
+### Attribution
 Preview attribution: \
 Brain image: https://pixabay.com/users/htchnm-14967706/ \
 Computer chip image: https://www.vecteezy.com/free-png/computer-chip 
+
+Thanks to #mod-development in the Rimworld discord for helping me solve my incredibly dumb problems.
+
+Thanks Alyssa for reuploading my mod to the Steam Workshop!
