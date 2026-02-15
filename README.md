@@ -73,7 +73,6 @@ Great! Request your idea as a feature on GitHub so I can see it!
 
 ### Known Bugs
 - Null chip does not stop skill decay (might just fix by allowing reduced learning speed instead of incapablity).
-- Generation of chip in faction leaders causes issues when visiting. 
 
 ### Added Features
 - Royalty noble wimp and other empire pawn integration
