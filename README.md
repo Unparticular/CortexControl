@@ -65,7 +65,7 @@ Most likely? This mod shouldn't be touching anything seriously related to combat
 This mod uses aptitudes for reducing skill levels via hediffs, and for some reason that isn't part of the base game and is instead DLC locked to Anomaly.
 
 #### I have an idea for your mod!
-Great! Write your idea down in a comment or on Github as a feature request so I can see it!
+Great! Request your idea as a feature on GitHub so I can see it!
 
 ### Future Plans
 - Ideology precept integration
@@ -81,7 +81,7 @@ Great! Write your idea down in a comment or on Github as a feature request so I 
 - Royalty noble wimp and other empire pawn integration
 
 ### Bug Reporting
-I don't have a great way to do this, but making a Github issue will led me see it more quickly.
+I don't have a great way to do this, but making a Github issue is probably the best way for now.
 
 Steam Workshop URL: https://steamcommunity.com/sharedfiles/filedetails/?id=3666283986
 
